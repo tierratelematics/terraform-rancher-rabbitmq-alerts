@@ -36,3 +36,9 @@ variable "rabbitmq_workload_name" {
   default = "rabbitmq"
 }
 
+variable "rabbitmq_queue_consumers" {
+  description = "Minimun number of consumer per queue"
+  type = string
+  default = "0"
+}
+

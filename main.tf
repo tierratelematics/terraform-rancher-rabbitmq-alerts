@@ -133,7 +133,7 @@ resource "rancher2_project_alert_rule" "rabbitmq-no-queue-consumer" {
   metric_rule {
     expression = "rabbitmq_queue_consumers"
     comparison = "less-than"
-    threshold_value = 1
+    threshold_value = var.rabbitmq_queue_consumers
     duration = var.rabbitmq_alarm_time_duration
   }
 }
